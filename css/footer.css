@@ -1,0 +1,58 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  /* 
+  vw => view-width라는 건데 우리가 보는 화면에 100%를 채운다는 표현이다. 
+  footer가 영역 너비를 차지하고 있지 않아 왼쪽으로 몰려있는데 이거를 가운데 배치 시킨다.
+  */
+  padding-bottom: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eaeaea;
+  background-color: white;
+}
+
+.footer-block {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footer-icons {
+  font-size: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px 0 10px; /* 시계방향 */
+  cursor: pointer;
+}
+
+.footer-icons__desc {
+  margin-top: 5px;
+  font-weight: bold;
+  transform: scale(0.8);
+}
+
+@keyframes icons-둥-둥 {
+  0% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  70% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.footer-icons__img {
+  width: 30px;
+}
+
+.footer-icons:hover .footer-icons__img {
+  animation: 1s icons-둥-둥;
+}

@@ -1,0 +1,40 @@
+/* 스타일 시트 여러개가 html파일에 링크로 삽입되는 방법도 괜찮지만 한 번에 모아서 하나로 만들어서 삽입하는 방법도 있다. */
+@import "reset.css";
+@import "header.css";
+@import "footer.css";
+@import "main.css";
+/* 
+style.css 안에 위 3개의 css 파일이 import되게 된다. 주입이 된다. 
+그러면 style.css만 carrot-market.html에 넣으면 된다.
+*/
+
+:root {
+  --button-primary: rgba(254, 111, 15, 0.8);
+  --button-hover: rgb(254, 111, 15);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI",
+    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+}
+
+.media-info-msg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; /* vh => view-height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .media-info-msg {
+    display: none;
+  }
+}
